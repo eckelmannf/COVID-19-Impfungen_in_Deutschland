@@ -46,4 +46,4 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           npm install
-          npm run ng -- deploy --repo=https://github.com/eckelmannf/COVID-19-Impfungen_in_Deutschland.git --base-href=/COVID-19-Impfungen_in_Deutschland/ --deploy-url="/COVID-19-Impfungen_in_Deutschland/ --name="EckelmannF" --email=eckelmannf@rki.de
+          npm run ng -- deploy --repo=https://github.com/eckelmannf/COVID-19-Impfungen_in_Deutschland.git --base-href=/COVID-19-Impfungen_in_Deutschland/ --deploy-url=/COVID-19-Impfungen_in_Deutschland/ --name="EckelmannF" --email=eckelmannf@rki.de
