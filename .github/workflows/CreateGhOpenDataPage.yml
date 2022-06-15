@@ -45,4 +45,4 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           npm install
-          npm run ng -- deploy --repo=https://github.com/$GITHUB_REPOSITORY.git --base-href=/${{ steps.repo-name.outputs.value }}/ --name=EckelmannF --email=EckelmannF@rki.de --branch=open-data-website
+          npm run ng -- deploy --repo=https://github.com/$GITHUB_REPOSITORY.git --base-href=/COVID-19-Impfungen_in_Deutschland/ --name=EckelmannF --email=EckelmannF@rki.de --branch=open-data-website
