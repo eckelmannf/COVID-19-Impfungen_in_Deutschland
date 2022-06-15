@@ -31,7 +31,6 @@ jobs:
         uses: ./
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          CWD: $GITHUB_WORKSPACE
 
       # Runs a single command using the runners shell
       - name: Setup Node.js environment
