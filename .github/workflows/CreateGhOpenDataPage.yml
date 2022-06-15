@@ -17,11 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:     
-      - name: Fetch Repo Name
-        id: repo-name
-        run: echo "::set-output name=value::$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')"
-        
+    steps:
       - name: Pull OpenDataPage
         # run: git clone https://github.com/whoohoo86/gh-open-data-page.git
         uses: actions/checkout@v2
@@ -29,10 +25,9 @@ jobs:
           repository: 'whoohoo86/gh-open-data-page'
         
       - name: Create datasource.json
-        uses: whoohoo86/gh-open-data-page-ds-action@master
+        uses: ./whoohoo86/gh-open-data-page
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          CWD:  ${{ github.workspace }}
 
       # Runs a single command using the runners shell
       - name: Setup Node.js environment
