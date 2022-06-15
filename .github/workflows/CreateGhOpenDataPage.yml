@@ -23,16 +23,14 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'whoohoo86/gh-open-data-page'
-          path: 'website'
           
       - name: Echo some content
         run : "ls -la"
       
       - name: Create datasource.json
-        uses: ./website
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          CWD: ./website
+          CWD: $GITHUB_WORKSPACE
 
       # Runs a single command using the runners shell
       - name: Setup Node.js environment
@@ -45,6 +43,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          cd ./website
+          cd $GITHUB_WORKSPACE
           npm install
           npm run ng -- deploy --repo=https://github.com/$GITHUB_REPOSITORY.git --base-href=/${{ steps.repo-name.outputs.value }}/ --name=EckelmannF --email=EckelmannF@rki.de --branch=open-data-website
