@@ -18,31 +18,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Pull OpenDataPage
+      - name: Create and deploy opendata website
         # run: git clone https://github.com/whoohoo86/gh-open-data-page.git
-        uses: actions/checkout@v2
-        with:
-          repository: 'whoohoo86/gh-open-data-page'
-          
-      - name: Echo some content
-        run : "ls -la"
-      
-      - name: Create datasource.json
-        uses: ./
+        uses: whoohoo86/gh-open-data-page@master
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      # Runs a single command using the runners shell
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.1
-        with:
-          node-version: 14.x
-
-      # Runs a set of commands using the runners shell
-      - name: Prepare and deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          cd $GITHUB_WORKSPACE
-          npm install
-          npm run ng -- deploy --repo=https://github.com/$GITHUB_REPOSITORY.git --base-href=/COVID-19-Impfungen_in_Deutschland/ --name=EckelmannF --email=EckelmannF@rki.de --branch=open-data-website
+          WEBSITE_BRANCH: "open-data-website"
