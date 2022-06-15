@@ -45,6 +45,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          cd $GITHUB_WORKSPACE
+          cd ./website
           npm install
           npm run ng -- deploy --repo=https://github.com/$GITHUB_REPOSITORY.git --base-href=/${{ steps.repo-name.outputs.value }}/ --name=EckelmannF --email=EckelmannF@rki.de --branch=open-data-website
