@@ -23,9 +23,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'whoohoo86/gh-open-data-page'
-        
+          path: 'website'
+          
+      - name: Echo some content
+        run : "ls -la"
+      
       - name: Create datasource.json
-        uses: ./whoohoo86/gh-open-data-page
+        uses: ./website
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
