@@ -28,6 +28,7 @@ jobs:
         run : "ls -la"
       
       - name: Create datasource.json
+        uses: ./$GITHUB_WORKSPACE
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           CWD: $GITHUB_WORKSPACE
