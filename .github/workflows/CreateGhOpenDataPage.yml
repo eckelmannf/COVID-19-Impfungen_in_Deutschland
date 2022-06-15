@@ -32,6 +32,7 @@ jobs:
         uses: ./website
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          CWD: ./website
 
       # Runs a single command using the runners shell
       - name: Setup Node.js environment
