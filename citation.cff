@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+type: dataset
+title: Mein Neuer Daasdfgr
+abstract: |-
+  skldjgklsd
+  sdgdfg
+  fhfg
+  hgf
+date-released: '2022-08-17'
+keywords:
+  - Tag1
+message: Cite me!
+url: https://www.github.io/asdafsdfsd
+licence: CC-BY-4.0
+doi: 10.5072/zenodo.1093681
+authors:
+  - family-names: Eckelmann
+    give-names: Fabian
+    orcid: ''
+    email: ''
+    affiliation: Robert Koch - Institut
