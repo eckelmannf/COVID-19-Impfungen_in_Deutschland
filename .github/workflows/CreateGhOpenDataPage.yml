@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Create and deploy opendata website
         # run: git clone https://github.com/whoohoo86/gh-open-data-page.git
-        uses: whoohoo86/gh-open-data-page@master
+        uses: eckelmannf/OpenData-Website@main
         with:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           WEBSITE_BRANCH: "open-data-website"
